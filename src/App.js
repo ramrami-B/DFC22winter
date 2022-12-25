@@ -24,69 +24,76 @@ function App() {
   }
   return (
     <div id="main">
-      <div id="top"></div>
+      <div id="top">
+        <div className="window-controll"></div>
+        <div className="search-bar">
+          <p>www.대구포항 DFC 22 겨울수련회.co.kr</p>
+        </div>
+      </div>
       <div id="home">
-        <div className="time-table">
-          <div className="time-table-top">
-            <p>만날 결심</p>
-          </div>
-          <table>
-            {/* HEAD */}
-            <tr className="point">
-              <th></th>
-              <th>첫째 날</th>
-              <th>둘째 날</th>
-              <th>셋째 날</th>
-              <th>넷째 날</th>
-            </tr>
-            {/* TIME */}
-            {TIME_ELEMENTS.map((times, idx) => (
-              <tr key={idx}>
-                {times.map((time, i) => {
-                  return time.includes("~") ? (
-                    <td className="point" key={i}>
-                      {time}
-                    </td>
-                  ) : time === "집합" ? (
-                    <td rowSpan={6} key={i}>
-                      {time}
-                    </td>
-                  ) : time === "활동(1)" ? (
-                    <td rowSpan={2} key={i}>
-                      {time}
-                    </td>
-                  ) : time === "선택 특강" ? (
-                    <td rowSpan={2} key={i}>
-                      {time}
-                    </td>
-                  ) : time === "전체 특강" ? (
-                    <td rowSpan={2} key={i}>
-                      {time}
-                    </td>
-                  ) : time === "내연산 등산" ? (
-                    <td rowSpan={3} key={i}>
-                      {time}
-                    </td>
-                  ) : time === "받은 은혜 가지고 살아내기" ? (
-                    <td rowSpan={10} key={i}>
-                      {time}
-                    </td>
-                  ) : time.includes("저녁") ? (
-                    <td colSpan={3} key={i}>
-                      {time}
-                    </td>
-                  ) : time.includes("취침") ? (
-                    <td colSpan={3} key={i}>
-                      {time}
-                    </td>
-                  ) : (
-                    <td key={i}>{time}</td>
-                  );
-                })}
+        <div className="time-table-div">
+          <div className="time-table">
+            <div className="time-table-top">
+              <p>❤ 만날 결심 ❤</p>
+            </div>
+            <table>
+              {/* HEAD */}
+              <tr className="point">
+                <th></th>
+                <th>첫째 날</th>
+                <th>둘째 날</th>
+                <th>셋째 날</th>
+                <th>넷째 날</th>
               </tr>
-            ))}
-          </table>
-          <p className="temp">* 둘째 날 전체 특강은 15:30분까지 입니다!</p>
+              {/* TIME */}
+              {TIME_ELEMENTS.map((times, idx) => (
+                <tr key={idx}>
+                  {times.map((time, i) => {
+                    return time.includes("~") ? (
+                      <td className="point" key={i}>
+                        {time}
+                      </td>
+                    ) : time === "집합" ? (
+                      <td rowSpan={6} key={i}>
+                        {time}
+                      </td>
+                    ) : time === "활동(1)" ? (
+                      <td rowSpan={2} key={i}>
+                        {time}
+                      </td>
+                    ) : time === "선택 특강" ? (
+                      <td rowSpan={2} key={i}>
+                        {time}
+                      </td>
+                    ) : time === "전체 특강" ? (
+                      <td rowSpan={2} key={i}>
+                        {time}
+                      </td>
+                    ) : time === "내연산 등산" ? (
+                      <td rowSpan={3} key={i}>
+                        {time}
+                      </td>
+                    ) : time === "받은 은혜 가지고 살아내기" ? (
+                      <td rowSpan={10} key={i}>
+                        {time}
+                      </td>
+                    ) : time.includes("저녁") ? (
+                      <td colSpan={3} key={i}>
+                        {time}
+                      </td>
+                    ) : time.includes("취침") ? (
+                      <td colSpan={3} key={i}>
+                        {time}
+                      </td>
+                    ) : (
+                      <td key={i}>{time}</td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </table>
+            <p className="temp">* 둘째 날 전체 특강은 15:30분까지 입니다!</p>
+          </div>
         </div>
       </div>
       <div id="bottom">
