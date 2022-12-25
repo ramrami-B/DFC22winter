@@ -1,0 +1,10 @@
+/* TOP */
+#top {
+  border-bottom: 1px solid rgb(126, 126, 126);
+  background-color: rgb(221, 221, 221);
+}
+
+/* BOTTOM */
+#bottom {
+  background-color: rgb(221, 221, 221);
+}
